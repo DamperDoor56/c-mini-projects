@@ -60,18 +60,19 @@ void calendar (int year, int daycode){
     int month, day;
     for(month= 1; month <= 12; month++){
         printf("%s", months[month]);
-        printf("\n\n Sun Mon Tue Wed Thu Fri Sat\n ");
+        printf("\n\nSun  Mon  Tue  Wed  Thu  Fri  Sat\n ");
 
-    // correct the position for the first date
+    // correct the position for the firsts dates
     for (day=1; day <=  1 + daycode * 5 ; day++){
         printf(" ");
         }
     // print all the dates for the month!
     for( day=1; day <= days_in_month[month]; day++){
         printf("%2d", day);
+
         // If day is before saturday else start on Sunday
         if((day + daycode) % 7 >0){
-            printf("    ");
+            printf("   ");
         }
         else {
                 printf("\n ");
